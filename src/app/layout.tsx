@@ -20,7 +20,7 @@ export default function RootLayout({
     <html lang="en" className="dark">
       <body className={`${inter.className} bg-background text-foreground mx-auto min-h-screen max-w-[80%]`}>
         <AnimatedBackground />
-        <div className="relative z-10">{children}</div>
+        <div className="relative z-10 max-w-[100%] md:max-w-[95%] lg:max-w-[90%] mx-auto">{children}</div>
       </body>
     </html>
   )

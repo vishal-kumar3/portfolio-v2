@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button"
 
 export default function HeroSection() {
   return (
-    <div className="min-h-[70vh] md:min-h-[60vh] text-foreground relative">
+    <div className="text-foreground relative">
       {/* Header */}
       <header className="flex justify-between items-center px-4 sm:px-8 py-6">
         <div className="text-foreground text-lg font-medium">vishalkumar.space</div>
@@ -23,10 +23,10 @@ export default function HeroSection() {
         <div className="flex-shrink-0 md:mr-8 mb-6 md:mb-0">
           <div className="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden">
             <Image
-              src="/placeholder.svg?height=128&width=128"
+              src="/images/profile/VishalKumar.jpg?height=128&width=128"
               alt="Vishal Kumar"
-              width={128}
-              height={128}
+              width={1080}
+              height={1080}
               className="w-full h-full object-cover"
             />
           </div>
