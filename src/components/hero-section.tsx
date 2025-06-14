@@ -7,7 +7,7 @@ export default function HeroSection() {
   return (
     <div className="text-foreground relative">
       {/* Header */}
-      <header className="flex justify-between items-center px-4 sm:px-8 py-6">
+      {/* <header className="flex justify-between items-center px-4 sm:px-8 py-6">
         <div className="text-foreground text-lg font-medium">vishalkumar.space</div>
         <Button
           variant="outline"
@@ -15,7 +15,7 @@ export default function HeroSection() {
         >
           Resume
         </Button>
-      </header>
+      </header> */}
 
       {/* Main Content */}
       <div className="flex flex-col md:flex-row items-center md:items-start px-4 sm:px-8 py-8 md:py-12 max-w-6xl mx-auto">

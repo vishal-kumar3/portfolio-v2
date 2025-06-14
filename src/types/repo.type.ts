@@ -25,6 +25,7 @@ type repoType = {
   watchers_count: number;
   stargazers_count: number;
   forks_count: number;
+  homepage: string | null;
 }
 
 type graphQlRepoType = {

@@ -1,7 +1,8 @@
 import Image from "next/image"
 import Link from "next/link"
 import { ExternalLink, GitFork, Github } from "lucide-react"
-import { getGithubRepos, getRepoByName } from "@/data/get-repo"
+import { getGithubRepos } from "@/data/get-repo"
+import { cn } from "@/lib/utils"
 
 
 export default async function ProjectsGrid() {
@@ -22,7 +23,9 @@ export default async function ProjectsGrid() {
         {data.map((project) => (
           <div
             key={project.id}
-            className="bg-muted/30 rounded-lg overflow-hidden hover:bg-muted/50 transition-all duration-300 cursor-pointer group backdrop-blur-sm"
+            className={cn(
+              "bg-muted/30 rounded-lg overflow-hidden hover:bg-muted/50 transition-all duration-300 cursor-pointer group backdrop-blur-sm",
+            )}
           >
             <Link href={`/project/${project.name}`} className="block">
               <div className="relative aspect-video">

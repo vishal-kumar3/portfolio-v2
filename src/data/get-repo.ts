@@ -40,7 +40,6 @@ export const getRepoByName = async (repo: string) => {
 
   const data: repoType = await response.json();
 
-  console.log("Fetching repo data for:", data);
   return {
     error: null,
     data: data
@@ -71,9 +70,8 @@ export const getReadmeFileOfRepo = async (repo: string) => {
     }
   }
 
-  const data = await response.json();
+  const data = await response.text();
 
-  console.log("Fetching README file for:", data);
   return {
     error: null,
     data: data

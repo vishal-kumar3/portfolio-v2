@@ -3,6 +3,7 @@ import type { Metadata } from "next"
 import { Inter } from "next/font/google"
 import "./globals.css"
 import AnimatedBackground from "@/components/animated-background"
+import Header from "@/components/header"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -18,9 +19,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="dark">
-      <body className={`${inter.className} bg-background text-foreground mx-auto min-h-screen max-w-[80%]`}>
+      <body className={`${inter.className} text-foreground`}>
         <AnimatedBackground />
-        <div className="relative z-10 max-w-[100%] md:max-w-[95%] lg:max-w-[90%] mx-auto">{children}</div>
+        <div className="relative z-10 mx-auto min-h-screen max-w-7xl px-4 sm:px-6 lg:px-8">
+          <Header />
+          <main>{children}</main>
+        </div>
       </body>
     </html>
   )
