@@ -26,6 +26,7 @@ type repoType = {
   stargazers_count: number;
   forks_count: number;
   homepage: string | null;
+  clone_url: string;
 }
 
 type graphQlRepoType = {

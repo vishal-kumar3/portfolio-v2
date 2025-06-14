@@ -19,7 +19,9 @@ export default async function HomePage({ searchParams }: { searchParams: Promise
       <Suspense>
         <MinimalistNavigation />
       </Suspense>
-      {content}
+      <div className="px-4 sm:px-8 py-8 sm:py-12 mx-auto">
+        {content}
+      </div>
     </main>
   )
 }

@@ -138,7 +138,6 @@ export const getGithubRepos = async (repoList: string[]) => {
     };
   }
   catch (error) {
-    console.error("Error fetching repos:", error);
     return {
       error: `Failed to fetch repos: ${error}`,
       data: null

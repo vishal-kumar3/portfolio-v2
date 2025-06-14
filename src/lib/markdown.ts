@@ -13,23 +13,28 @@ import rehypeAutolinkHeadings from 'rehype-autolink-headings'
 export async function markdownToHtml(markdown: string) {
   const result = await remark()
     .use(remarkGfm)
-    .use(html)
+    .use(html, { sanitize: false })
     .process(markdown);
 
   const processedHtml = await unified()
     .use(rehypeParse, { fragment: true })
-    .use(rehypeSanitize)
     .use(rehypeSlug)
     .use(rehypeAutolinkHeadings)
     .use(() => (tree: any) => {
-      // Add custom classes to headings
-      tree.children.forEach((node: any) => {
+      // Add custom classes to elements
+      const walkTree = (node: any) => {
         if (node.type === 'element') {
           if (node.tagName === 'h1') {
             node.properties = { ...node.properties, className: ['text-center text-3xl font-bold mb-6'] };
           }
         }
-      });
+
+        if (node.children) {
+          node.children.forEach(walkTree);
+        }
+      };
+
+      tree.children.forEach(walkTree);
     })
     .use(rehypeStringify)
     .process(result.toString());

@@ -1,5 +1,11 @@
-[
-  {
-    
-  }
-]
+{
+  "projects": [
+    "interview-ai",
+    "Devcord",
+    "animata",
+    "starter-kit",
+    "WriteFlow",
+    "portfolio-x",
+    "portfolio-v2"
+  ]
+}

@@ -14,5 +14,28 @@
   },
   "coding": {
     "leetcode": "https://leetcode.com/u/VishalKumar10"
-  }
+  },
+  "resume": "https://drive.google.com/file/d/1GQfXykBrVEkqtUA0At2grxlJhytCCyvH/view",
+  "description": "I am a passionate software developer with a keen interest in web development and open source contributions. I love to explore new technologies and build innovative solutions.",
+  "skills": [
+    "JavaScript",
+    "TypeScript",
+    "Go",
+    "Python",
+    "React.js",
+    "Next.js",
+    "Node.js",
+    "Express.js",
+    "PostgreSQL",
+    "MongoDB",
+    "Redis",
+    "Tailwind CSS",
+    "Git",
+    "GitHub",
+    "AWS",
+    "Docker",
+    "Kubernetes",
+    "GraphQL",
+    "FastAPI"
+  ]
 }
