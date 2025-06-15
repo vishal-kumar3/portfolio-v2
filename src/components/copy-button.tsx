@@ -21,7 +21,7 @@ export const CopyButton = ({ text, tooltip }: { text: string, tooltip: string })
   }
 
   return (
-    <TooltipProvider tooltip={tooltip}>
+    <TooltipProvider key={text} tooltip={tooltip}>
       <Button variant="outline" onClick={handleCopy} className="cursor-pointer transition-all duration-150 ease-in-out">
         {
           copied ? (
